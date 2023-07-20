@@ -1,0 +1,67 @@
+from js import document
+from js import plt
+from js import yf
+from js import Math
+
+def get_random_stocks():
+    stock_symbols = ['MGLU3.SA', 'VALE3.SA', 'CSNA3.SA', 'WEGE3.SA', 'PETR4.SA', 'LAME4.SA', 'OIBR3.SA']
+    random_stocks = []
+
+    # Seleciona três símbolos de ações aleatoriamente
+    for _ in range(3):
+        random_index = Math.floor(Math.random() * len(stock_symbols))
+        random_stock = stock_symbols[random_index]
+        random_stocks.append(random_stock)
+
+    return random_stocks
+
+def generate_graph(stock_symbols):
+    plt.figure(figsize=(10, 6))
+
+    for symbol in stock_symbols:
+        stock = yf.download(symbol, period='1mo')
+        prices = stock['Close']
+        plt.plot(prices.index, prices, label=symbol)
+
+    plt.xlabel('Data')
+    plt.ylabel('Preço')
+    plt.title('Variação de Preços no Último Mês')
+    plt.legend()
+
+    plt.savefig('stock_graph.png')  # Salva o gráfico como uma imagem
+
+# Obtém três ações aleatórias da B3
+random_stocks = get_random_stocks()
+
+# Gera o gráfico das três ações aleatórias
+generate_graph(random_stocks)
+
+# Adicionando o gráfico à página HTML
+html_code = '''
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Gráfico de Ações Aleatórias</title>
+    <style>
+        #chart-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+        #stock-chart {
+            width: 800px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gráfico de Ações Aleatórias</h1>
+    <h2>As três ações aleatórias da B3 são: {}</h2>
+    <div id="chart-container">
+        <img id="stock-chart" src="stock_graph.png" alt="Gráfico de Ações">
+    </div>
+</body>
+</html>
+'''.format(', '.join(random_stocks))
+
+document.body.innerHTML = html_code
