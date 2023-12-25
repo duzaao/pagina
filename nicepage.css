@@ -41617,3 +41617,67 @@ small {
   display: block;
   margin: 0 auto;
 }
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  scroll-snap-align: start;
+  height: 70vh;
+
+  /* unrelated visual styling */
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+
+.u-section-6 {
+  display: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollable-section {
+  width: 50%; /* Altere para o valor desejado */
+  height: 400px; /* Altere para o valor desejado */
+  overflow: auto;
+  border: 10px solid black;
+  margin: auto;
+  margin-bottom: 50px; /* Altere para o valor desejado */
+}
+
+
+.text-band-1 {
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+  color: white; /* Cor do texto */
+  width: 50%;
+  position: absolute;
+  top: 0%;
+  right: 0; /* Alinhado à direita */
+}
+
+.text-band-2 {
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+  color: white; /* Cor do texto */
+  width: 50%;
+  position: absolute;
+  top: 0%;
+  left: 0; /* Alinhado à esquerda */
+}
+
+
+.section-1 .text-band {
+  right: 0;
+}
+
+.section-2 .text-band {
+  left: 0;
+}

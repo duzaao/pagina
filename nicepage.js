@@ -80,3 +80,12 @@ window.onload = function() {
     };
   };
   
+
+  function toggleScrollableSection() {
+    var scrollableSection = document.querySelector('.scrollable-section');
+    if (scrollableSection.style.display === "none") {
+      scrollableSection.style.display = "block";
+    } else {
+      scrollableSection.style.display = "none";
+    }
+  }
