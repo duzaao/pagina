@@ -41455,7 +41455,12 @@ body {
   perspective: 1000px;
   transform: perspective(1000px) translateY(0);
   transform-style: preserve-3d;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
 }
 
 .card.dark {

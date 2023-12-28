@@ -274,7 +274,14 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
       </div></footer>
 
 
-
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".card-wrapper").on("swipe", function() {
+        $(this).find(".card").toggleClass("flipped");
+      });
+    });
+  </script>
 </body>
 
 
