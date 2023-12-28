@@ -41448,7 +41448,7 @@ body {
   flex-basis: 50%; /* Define a largura do bloco direito para 50% do contêiner flexível */
 }
 .card {
-  width: 100%; /* Faz a carta ocupar toda a largura do wrapper */
+  width: 100%; 
   height: 40%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
@@ -41500,11 +41500,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Faz o container ocupar toda a altura da página */
+  height: 100vh; 
 }
 
 .u-section-3 {
-  padding: 20px; /* Adiciona um espaço ao redor da seção */
+  padding: 20px; 
 }
 
 .text-overlay {
