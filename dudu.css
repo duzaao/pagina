@@ -41448,8 +41448,8 @@ body {
   flex-basis: 50%; /* Define a largura do bloco direito para 50% do contêiner flexível */
 }
 .card {
-  width: 230px;
-  height: 325px;
+  width: 100%; /* Faz a carta ocupar toda a largura do wrapper */
+  height: 40%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
   perspective: 1000px;
@@ -41457,36 +41457,54 @@ body {
   transform-style: preserve-3d;
   transition: transform 0.8s ease-in-out;
 }
+
 .card.dark {
   background-color: #31237c;
   color: #fbfbfb;
 }
+
 .card.dark .purchase-button {
   border: 1px solid indianred;
 }
+
 .card.light {
   background-color: #fbfbfb;
   color: #272727;
 }
+
 .card.light .purchase-button {
   border: 1px solid indianred;
 }
 
-.card-container {
-  display: flex;
-}
 
+
+.card-wrapper {
+  width: 100%; 
+  height: 60%;
+}
 .card-wrapper:hover .card {
   transform: rotateY(179deg);
   z-index: 2;
 }
+
 .card-wrapper:hover .card .text-overlay {
   opacity: 0;
   transform-style: preserve-3d;
   z-index: 1;
 }
+
 .card-wrapper:hover .card .purchase-button-container {
   opacity: 1;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Faz o container ocupar toda a altura da página */
+}
+
+.u-section-3 {
+  padding: 20px; /* Adiciona um espaço ao redor da seção */
 }
 
 .text-overlay {
