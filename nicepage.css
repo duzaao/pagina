@@ -41629,15 +41629,13 @@ body {
 .section {
   scroll-snap-align: start;
   height: 70vh;
-
-  /* unrelated visual styling */
+  position: relative;
   color: white;
   font-size: 30px;
   font-weight: bold;
   padding: 40px;
   box-sizing: border-box;
 }
-
 
 .u-section-6 {
   display: center;
@@ -41646,31 +41644,31 @@ body {
 }
 
 .scrollable-section {
-  width: 50%; /* Altere para o valor desejado */
-  height: 400px; /* Altere para o valor desejado */
+  width: 80%; 
+  height: 500px; 
   overflow: auto;
-  border: 10px solid black;
+  border: 10% solid black;
   margin: auto;
-  margin-bottom: 50px; /* Altere para o valor desejado */
+  margin-bottom: 5%; 
 }
 
 
 .text-band-1 {
-  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
-  color: white; /* Cor do texto */
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white; 
   width: 50%;
   position: absolute;
   top: 0%;
-  right: 0; /* Alinhado à direita */
+  right: 0; 
 }
 
 .text-band-2 {
-  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
-  color: white; /* Cor do texto */
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white; 
   width: 50%;
   position: absolute;
   top: 0%;
-  left: 0; /* Alinhado à esquerda */
+  left: 0; 
 }
 
 
