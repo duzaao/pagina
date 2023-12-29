@@ -41666,39 +41666,56 @@ body {
   align-items: center;
 }
 
+.text-band-1, .text-band-2 {
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white; 
+  width: 50%;
+  position: absolute;
+  top: 0%;
+}
+
+.text-band-1 {
+  right: 0; 
+}
+
+.text-band-2 {
+  left: 0; 
+}
+
 .scrollable-section {
   width: 80%; 
-  height: 500px; 
+  height: 70vh; /* Altura para desktops */
   overflow: auto;
   border: 10% solid black;
   margin: auto;
   margin-bottom: 5%; 
 }
 
-
-.text-band-1 {
-  background-color: rgba(0, 0, 0, 0.5); 
-  color: white; 
-  width: 50%;
-  position: absolute;
-  top: 0%;
-  right: 0; 
+.text-band-1 h2, .text-band-2 h2 {
+  font-size: 2.5vw; /* Tamanho da fonte para desktops */
 }
 
-.text-band-2 {
-  background-color: rgba(0, 0, 0, 0.5); 
-  color: white; 
-  width: 50%;
-  position: absolute;
-  top: 0%;
-  left: 0; 
+.text-band-1 p, .text-band-2 p {
+  font-size: 1.5vw; /* Tamanho da fonte para desktops */
 }
 
+@media (max-width: 600px) {
+  .text-band-1, .text-band-2 {
+    font-size: large;
+    width: 100%; /* Ocupa toda a largura */
+    height: 100%; /* Ocupa toda a altura */
+    display: flex; /* Usa flexbox para alinhar o conteúdo */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    align-items: center; /* Alinha o conteúdo horizontalmente no meio */
+    position: relative; /* Posiciona o conteúdo relativo ao elemento pai */
+    top: 0; /* Posiciona o conteúdo no topo */
+    left: 0; /* Posiciona o conteúdo na esquerda */
+    padding: 10px; /* Adiciona um pouco de espaço ao redor do conteúdo para evitar que ele saia da margem */
+  }
 
-.section-1 .text-band {
-  right: 0;
-}
-
-.section-2 .text-band {
-  left: 0;
+  .text-band-1 h2, .text-band-2 h2,
+  .text-band-1 p, .text-band-2 p {
+    font-size: 1vw; /* Diminui o tamanho da fonte */
+  }
 }
